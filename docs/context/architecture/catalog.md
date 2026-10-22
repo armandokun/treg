@@ -261,7 +261,7 @@ field), a send is $0.002 (a send OpenMail rejects or blocks is a non-2xx and so 
 attachment download $0.001, everything else free. Reads are `cache: forbidden` — mail is private.
 Custom domains are `own_account`/BYOK-only: a domain belongs to an OpenMail account, and an
 unverified claim on the shared account would lock it for every other team. `term`, `inboxes.renew`
-and inbox expiry (7-day read-only grace, purge, address retired 12 months) are the planned OpenMail
+and inbox inactivity (old mail readable, new mail bounces, renew reactivates the same address) are the planned OpenMail
 API shape agreed 2026-10-22 and not live yet; the rows carry no `verified` stamp until they are.
 
 `team_label` covers provider objects that outlive a call and are kept per label (monitors,
