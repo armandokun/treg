@@ -3,7 +3,7 @@ source:
   docs: https://docs.openmail.sh
   curated: 2026-10-22
 pricing_url: https://openmail.sh/pricing
-limits: "On treg's key every team gets its own OpenMail pod: inbox ids from another team are refused upstream. Inboxes are paid per term (7 or 30 days) on create and renew; an expired inbox goes inactive (old mail readable, new mail bounces) until it is renewed; the address is never recycled. Caps: 100 sends/day on a 30-day inbox, 20/day on a 7-day inbox. Custom domains need your own OpenMail account."
+limits: "On treg's key every team gets its own OpenMail pod: inbox ids from another team are refused upstream. Inboxes are paid per term (7 or 30 days) on create and renew; an expired inbox goes inactive: it still receives, but reading and sending need a renewal; the address is never recycled. Caps: 100 sends/day on a 30-day inbox, 20/day on a 7-day inbox. Custom domains need your own OpenMail account."
 # Prices are the treg offer of 2026-10-20 (user-facing USD); OpenMail's own retail is EUR.
 # `term` on create and renew, `POST /v1/inboxes/{id}/renew` and inactivity are the planned OpenMail API
 # shape agreed 2026-10-22 and not yet live; verify these rows once it ships.
